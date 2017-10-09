@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		9F5B16491F8B227B00615F84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B16481F8B227B00615F84 /* AppDelegate.swift */; };
-		9F5B164B1F8B227B00615F84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B164A1F8B227B00615F84 /* ViewController.swift */; };
 		9F5B164E1F8B227B00615F84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5B164C1F8B227B00615F84 /* Main.storyboard */; };
 		9F5B16511F8B227B00615F84 /* FoodPal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B164F1F8B227B00615F84 /* FoodPal.xcdatamodeld */; };
 		9F5B16531F8B227B00615F84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F5B16521F8B227B00615F84 /* Assets.xcassets */; };
 		9F5B16561F8B227B00615F84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5B16541F8B227B00615F84 /* LaunchScreen.storyboard */; };
 		9F5B16611F8B227C00615F84 /* FoodPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B16601F8B227C00615F84 /* FoodPalTests.swift */; };
+		9F5B166C1F8B24EA00615F84 /* PersistentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B166B1F8B24EA00615F84 /* PersistentService.swift */; };
+		9F5B166E1F8B297800615F84 /* GroceryListsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B166D1F8B297800615F84 /* GroceryListsTableViewController.swift */; };
+		9F5B16701F8B2D1B00615F84 /* GroceryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B166F1F8B2D1B00615F84 /* GroceryListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +31,6 @@
 /* Begin PBXFileReference section */
 		9F5B16451F8B227B00615F84 /* FoodPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5B16481F8B227B00615F84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F5B164A1F8B227B00615F84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9F5B164D1F8B227B00615F84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F5B16501F8B227B00615F84 /* FoodPal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPal.xcdatamodel; sourceTree = "<group>"; };
 		9F5B16521F8B227B00615F84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +39,9 @@
 		9F5B165C1F8B227C00615F84 /* FoodPalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodPalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5B16601F8B227C00615F84 /* FoodPalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPalTests.swift; sourceTree = "<group>"; };
 		9F5B16621F8B227C00615F84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F5B166B1F8B24EA00615F84 /* PersistentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentService.swift; sourceTree = "<group>"; };
+		9F5B166D1F8B297800615F84 /* GroceryListsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListsTableViewController.swift; sourceTree = "<group>"; };
+		9F5B166F1F8B2D1B00615F84 /* GroceryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +84,14 @@
 			isa = PBXGroup;
 			children = (
 				9F5B16481F8B227B00615F84 /* AppDelegate.swift */,
-				9F5B164A1F8B227B00615F84 /* ViewController.swift */,
 				9F5B164C1F8B227B00615F84 /* Main.storyboard */,
 				9F5B16521F8B227B00615F84 /* Assets.xcassets */,
 				9F5B16541F8B227B00615F84 /* LaunchScreen.storyboard */,
 				9F5B16571F8B227B00615F84 /* Info.plist */,
 				9F5B164F1F8B227B00615F84 /* FoodPal.xcdatamodeld */,
+				9F5B166B1F8B24EA00615F84 /* PersistentService.swift */,
+				9F5B166D1F8B297800615F84 /* GroceryListsTableViewController.swift */,
+				9F5B166F1F8B2D1B00615F84 /* GroceryListTableViewController.swift */,
 			);
 			path = FoodPal;
 			sourceTree = "<group>";
@@ -202,7 +208,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F5B164B1F8B227B00615F84 /* ViewController.swift in Sources */,
+				9F5B166C1F8B24EA00615F84 /* PersistentService.swift in Sources */,
+				9F5B166E1F8B297800615F84 /* GroceryListsTableViewController.swift in Sources */,
+				9F5B16701F8B2D1B00615F84 /* GroceryListTableViewController.swift in Sources */,
 				9F5B16511F8B227B00615F84 /* FoodPal.xcdatamodeld in Sources */,
 				9F5B16491F8B227B00615F84 /* AppDelegate.swift in Sources */,
 			);
