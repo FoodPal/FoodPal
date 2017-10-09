@@ -16,6 +16,8 @@
 		9F5B166C1F8B24EA00615F84 /* PersistentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B166B1F8B24EA00615F84 /* PersistentService.swift */; };
 		9F5B166E1F8B297800615F84 /* GroceryListsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B166D1F8B297800615F84 /* GroceryListsTableViewController.swift */; };
 		9F5B16701F8B2D1B00615F84 /* GroceryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B166F1F8B2D1B00615F84 /* GroceryListTableViewController.swift */; };
+		9F5B16721F8B410C00615F84 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B16711F8B410C00615F84 /* MapViewController.swift */; };
+		9F5B16741F8B414A00615F84 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B16731F8B414A00615F84 /* AuthenticationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		9F5B166B1F8B24EA00615F84 /* PersistentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentService.swift; sourceTree = "<group>"; };
 		9F5B166D1F8B297800615F84 /* GroceryListsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListsTableViewController.swift; sourceTree = "<group>"; };
 		9F5B166F1F8B2D1B00615F84 /* GroceryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListTableViewController.swift; sourceTree = "<group>"; };
+		9F5B16711F8B410C00615F84 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9F5B16731F8B414A00615F84 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +93,11 @@
 				9F5B16541F8B227B00615F84 /* LaunchScreen.storyboard */,
 				9F5B16571F8B227B00615F84 /* Info.plist */,
 				9F5B164F1F8B227B00615F84 /* FoodPal.xcdatamodeld */,
-				9F5B166B1F8B24EA00615F84 /* PersistentService.swift */,
 				9F5B166D1F8B297800615F84 /* GroceryListsTableViewController.swift */,
 				9F5B166F1F8B2D1B00615F84 /* GroceryListTableViewController.swift */,
+				9F5B166B1F8B24EA00615F84 /* PersistentService.swift */,
+				9F5B16711F8B410C00615F84 /* MapViewController.swift */,
+				9F5B16731F8B414A00615F84 /* AuthenticationViewController.swift */,
 			);
 			path = FoodPal;
 			sourceTree = "<group>";
@@ -209,7 +215,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F5B166C1F8B24EA00615F84 /* PersistentService.swift in Sources */,
+				9F5B16721F8B410C00615F84 /* MapViewController.swift in Sources */,
 				9F5B166E1F8B297800615F84 /* GroceryListsTableViewController.swift in Sources */,
+				9F5B16741F8B414A00615F84 /* AuthenticationViewController.swift in Sources */,
 				9F5B16701F8B2D1B00615F84 /* GroceryListTableViewController.swift in Sources */,
 				9F5B16511F8B227B00615F84 /* FoodPal.xcdatamodeld in Sources */,
 				9F5B16491F8B227B00615F84 /* AppDelegate.swift in Sources */,
