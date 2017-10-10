@@ -34,12 +34,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eiU-6v-2wN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-556" y="234.33283358320841"/>
+            <point key="canvasLocation" x="-158" y="238"/>
         </scene>
         <!--Recipes-->
         <scene sceneID="tFN-0q-uy5">
             <objects>
-                <tableViewController id="TRo-Vt-SOe" sceneMemberID="viewController">
+                <tableViewController id="TRo-Vt-SOe" customClass="RecipesTableViewController" customModule="FoodPal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N9y-ND-zf4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,7 +53,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="reR-Pl-MCY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recipe" id="reR-Pl-MCY">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="reR-Pl-MCY" id="m0q-1c-faQ">
@@ -123,9 +123,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PT3-88-Vu8">
-                                <rect key="frame" x="100" y="487" width="50" height="50"/>
+                                <rect key="frame" x="100" y="487" width="40" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="fnx-lZ-bec"/>
                                     <constraint firstAttribute="height" constant="50" id="sZD-Ef-aAD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -135,10 +134,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmE-oo-1JA">
-                                <rect key="frame" x="225" y="487" width="50" height="50"/>
+                                <rect key="frame" x="226" y="487" width="49" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9RJ-XG-pz5"/>
-                                    <constraint firstAttribute="width" constant="50" id="UrZ-Y0-9Ej"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Sign up"/>
@@ -153,6 +151,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="n1L-MB-lL3" firstAttribute="top" secondItem="9FA-WV-2wj" secondAttribute="bottom" constant="30" id="65l-WY-w9c"/>
+                            <constraint firstItem="KmE-oo-1JA" firstAttribute="leading" secondItem="PT3-88-Vu8" secondAttribute="trailing" constant="86" id="6hL-Ml-GgK"/>
                             <constraint firstItem="GeJ-Ds-RwE" firstAttribute="trailing" secondItem="4O3-Sh-SjJ" secondAttribute="trailing" constant="50" id="BpV-T7-xvp"/>
                             <constraint firstItem="GeJ-Ds-RwE" firstAttribute="trailing" secondItem="KmE-oo-1JA" secondAttribute="trailing" constant="100" id="EeE-0Z-cfa"/>
                             <constraint firstItem="GeJ-Ds-RwE" firstAttribute="bottom" secondItem="KmE-oo-1JA" secondAttribute="bottom" constant="130" id="EuC-Cf-zlh"/>
@@ -273,20 +272,21 @@
             </objects>
             <point key="canvasLocation" x="1046" y="-428"/>
         </scene>
-        <!--View Controller-->
+        <!--Grocery Item-->
         <scene sceneID="fCc-gZ-cQw">
             <objects>
-                <viewController id="fWU-w9-uu0" sceneMemberID="viewController">
+                <viewController id="fWU-w9-uu0" customClass="GroceryItemViewController" customModule="FoodPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rPO-HX-3kz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="eTx-DI-duh"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Grocery Item" id="Pdk-de-0Eb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCn-yw-jtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="-429"/>
+            <point key="canvasLocation" x="1832.8" y="-429.53523238380814"/>
         </scene>
         <!--Groceries-->
         <scene sceneID="T1z-RK-e1v">
