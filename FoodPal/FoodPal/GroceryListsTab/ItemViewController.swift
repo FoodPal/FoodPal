@@ -1,15 +1,17 @@
 //
-//  GroceryItemViewController.swift
+//  ItemViewController.swift
 //  FoodPal
 //
-//  Created by Teodor Ivanov on 10/9/17.
+//  Created by Teodor Ivanov on 10/25/17.
 //  Copyright © 2017 Teodor Ivanov. All rights reserved.
 //
 
 import UIKit
 
-class GroceryItemViewController: UIViewController {
+class ItemViewController: UIViewController {
 
+    var groceryItem: GroceryItem?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

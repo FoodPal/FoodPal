@@ -9,13 +9,22 @@
 import UIKit
 
 class GroceryListTableViewController: UITableViewController {
-
-    let categories = ["Vegatables", "Fruits", "Meats", "Dairy", "Grains"]
-    let list = [["Tomatoes", "Lettuce"], ["Bananas", "Apples"] , [], [], ["Bread"]]
+    
+    var groceryList = GroceryList(name: "myList", id: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let apple = GroceryItem(id: 2, name: "Apple", description: "Red Gala apples", cost: 2.99, category: "Fruit")
+        let orange = GroceryItem(id: 3, name: "Orange", description: "Orange Native orange from Mexico", cost: 3.99, category: "Fruit")
+        let lettuce = GroceryItem(id: 56, name: "lettuce", description: "green ball", cost: 3.50, category: "Vegetable")
+        let bread = GroceryItem(id: 70, name: "Bread", description: "Wheat Bread", cost: 1.99, category: "Grain")
+        
+        groceryList.items.append(apple)
+        groceryList.items.append(orange)
+        groceryList.items.append(lettuce)
+        groceryList.items.append(bread)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -27,23 +36,26 @@ class GroceryListTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return categories.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return list[section].count
+        // #warning Incomplete implementation, return the number of row
+        return groceryList.items.count
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return categories[section]
-    }
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return groceryList.categories[section].name
+//    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "groceryItem", for: indexPath)
-        cell.textLabel?.text = list[indexPath.section][indexPath.row]
-        // Configure the cell...
-
+        var cell = UITableViewCell()
+        if let groceryItemCell = tableView.dequeueReusableCell(withIdentifier: "groceryItemCell", for: indexPath) as? GroceryItemTableViewCell {
+            groceryItemCell.groceryItemNameLabel.text = groceryList.items[indexPath.row].name
+            groceryItemCell.groceryItemUIImageView.image = #imageLiteral(resourceName: "Groceries")
+            
+            cell = groceryItemCell
+        }
         return cell
     }
 

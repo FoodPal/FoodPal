@@ -9,7 +9,9 @@
 import UIKit
 
 class AuthenticationViewController: UIViewController {
-
+    @IBOutlet weak var userNameTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +22,16 @@ class AuthenticationViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func loginTapped(_ sender: Any) {
+        print("loginTapped")
+    }
+    
+    
+    @IBAction func signUpTapped(_ sender: Any) {
+        print("signUpTapped")
+    }
+    
     
 
     /*

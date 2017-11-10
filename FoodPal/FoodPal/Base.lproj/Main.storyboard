@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="neH-jL-O7G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="neH-jL-O7G">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eiU-6v-2wN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-158" y="238"/>
+            <point key="canvasLocation" x="-162" y="270"/>
         </scene>
         <!--Recipes-->
         <scene sceneID="tFN-0q-uy5">
@@ -53,7 +54,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recipe" id="reR-Pl-MCY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recipesCell" id="reR-Pl-MCY">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="reR-Pl-MCY" id="m0q-1c-faQ">
@@ -83,7 +84,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="398" y="940"/>
+            <point key="canvasLocation" x="396" y="985"/>
         </scene>
         <!--Recipes-->
         <scene sceneID="bmZ-29-ufd">
@@ -100,7 +101,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dK4-aD-onO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-556" y="940"/>
+            <point key="canvasLocation" x="-556" y="986"/>
         </scene>
         <!--Authentication View Controller-->
         <scene sceneID="mpl-jg-TIO">
@@ -130,6 +131,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Log in"/>
                                 <connections>
+                                    <action selector="loginTapped:" destination="neH-jL-O7G" eventType="touchUpInside" id="STd-kl-kSc"/>
                                     <segue destination="75H-Vq-mmY" kind="show" id="CBg-fw-b5B"/>
                                 </connections>
                             </button>
@@ -140,6 +142,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <action selector="signUpTapped:" destination="neH-jL-O7G" eventType="touchUpInside" id="eyp-y9-aYf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4O3-Sh-SjJ">
                                 <rect key="frame" x="50" y="323" width="275" height="21"/>
@@ -167,10 +172,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GeJ-Ds-RwE"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="n1L-MB-lL3" id="0lr-lT-O6W"/>
+                        <outlet property="userNameTextField" destination="9FA-WV-2wj" id="AFK-Iq-Z6x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0P-k4-Xo7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2407" y="-99"/>
+            <point key="canvasLocation" x="-2407.1999999999998" y="-99.400299850074973"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pBG-ip-g2r">
@@ -200,7 +209,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="groceryList" textLabel="dBs-AU-fHS" style="IBUITableViewCellStyleDefault" id="er4-1m-UcN">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="groceryListCell" textLabel="dBs-AU-fHS" style="IBUITableViewCellStyleDefault" id="er4-1m-UcN">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="er4-1m-UcN" id="S3X-Yq-WaY">
@@ -208,7 +217,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dBs-AU-fHS">
-                                            <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -230,35 +239,50 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DxH-Sc-A1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="262" y="-427"/>
+            <point key="canvasLocation" x="263" y="-451"/>
         </scene>
-        <!--Grocery List Table View Controller-->
+        <!--List-->
         <scene sceneID="Idv-uB-pqb">
             <objects>
                 <tableViewController id="H2m-F1-N8r" customClass="GroceryListTableViewController" customModule="FoodPal" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9Dz-7Z-XHD">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9Dz-7Z-XHD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="groceryItem" textLabel="haU-pv-fwA" style="IBUITableViewCellStyleDefault" id="ov8-tS-THW">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="groceryItemCell" rowHeight="70" id="ov8-tS-THW" customClass="GroceryItemTableViewCell" customModule="FoodPal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ov8-tS-THW" id="JR9-4s-4qL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="haU-pv-fwA">
-                                            <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iC9-3a-Tjd">
+                                            <rect key="frame" x="10" y="5" width="104.5" height="59"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="iC9-3a-Tjd" secondAttribute="height" multiplier="16:9" id="afV-O7-pEz"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9t-vf-eb6">
+                                            <rect key="frame" x="122.5" y="5" width="242.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="iC9-3a-Tjd" secondAttribute="bottom" constant="5.5" id="9FX-3k-CF8"/>
+                                        <constraint firstItem="iC9-3a-Tjd" firstAttribute="leading" secondItem="JR9-4s-4qL" secondAttribute="leading" constant="10" id="DnM-Pi-CHa"/>
+                                        <constraint firstItem="I9t-vf-eb6" firstAttribute="top" secondItem="iC9-3a-Tjd" secondAttribute="top" id="HAN-hP-YLw"/>
+                                        <constraint firstItem="I9t-vf-eb6" firstAttribute="leading" secondItem="iC9-3a-Tjd" secondAttribute="trailing" constant="8" id="IgU-ob-xRD"/>
+                                        <constraint firstItem="iC9-3a-Tjd" firstAttribute="top" secondItem="JR9-4s-4qL" secondAttribute="top" constant="5" id="mdt-wJ-TbA"/>
+                                        <constraint firstAttribute="trailing" secondItem="I9t-vf-eb6" secondAttribute="trailing" constant="10" id="oHs-C5-jle"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="fWU-w9-uu0" kind="show" id="DnH-4G-C8F"/>
+                                    <outlet property="groceryItemNameLabel" destination="I9t-vf-eb6" id="0z6-zl-6SF"/>
+                                    <outlet property="groceryItemUIImageView" destination="iC9-3a-Tjd" id="kdb-EO-bBs"/>
+                                    <segue destination="PZy-5q-44L" kind="show" id="dI0-r8-mLl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -267,26 +291,27 @@
                             <outlet property="delegate" destination="H2m-F1-N8r" id="HJQ-Ng-nTB"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="List" id="7Ty-BW-fCB"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBN-GM-1ZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="-428"/>
+            <point key="canvasLocation" x="1048.8" y="-451.12443778110946"/>
         </scene>
-        <!--Grocery Item-->
-        <scene sceneID="fCc-gZ-cQw">
+        <!--Item-->
+        <scene sceneID="gLG-Mh-Qor">
             <objects>
-                <viewController id="fWU-w9-uu0" customClass="GroceryItemViewController" customModule="FoodPal" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rPO-HX-3kz">
+                <viewController id="PZy-5q-44L" customClass="ItemViewController" customModule="FoodPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d2Z-3U-ydb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="eTx-DI-duh"/>
+                        <viewLayoutGuide key="safeArea" id="8fW-t5-Y7z"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Grocery Item" id="Pdk-de-0Eb"/>
+                    <navigationItem key="navigationItem" title="Item" id="2Pm-7S-iI4"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aCn-yw-jtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TR9-mj-zfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1832.8" y="-429.53523238380814"/>
+            <point key="canvasLocation" x="1924" y="-451"/>
         </scene>
         <!--Groceries-->
         <scene sceneID="T1z-RK-e1v">
@@ -303,7 +328,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9q-LH-SIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-556" y="-428"/>
+            <point key="canvasLocation" x="-556" y="-451"/>
         </scene>
     </scenes>
     <resources>

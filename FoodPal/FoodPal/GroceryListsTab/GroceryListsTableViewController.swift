@@ -10,10 +10,12 @@ import UIKit
 
 class GroceryListsTableViewController: UITableViewController {
 
-    var lists = ["My First List", "Second List"]
+    var lists = [GroceryList]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        lists.append(GroceryList(name: "My first list", id: 1))
+        lists.append(GroceryList(name: "Second One", id: 2))
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -34,8 +36,8 @@ class GroceryListsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "groceryList", for: indexPath)
-        cell.textLabel?.text = lists[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "groceryListCell", for: indexPath)
+        cell.textLabel?.text = lists[indexPath.row].name
         // Configure the cell...
         return cell
     }
